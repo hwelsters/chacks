@@ -1,0 +1,72 @@
+.root {
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+  background-color: var(--bg-color);
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  height: var(--navbar-height);
+  padding-left: var(--padding-large);
+  padding-right: var(--padding-large);
+}
+
+/* BUTTON */
+.button {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  filter: brightness(0.9);
+
+  /* border-style: solid;
+    border-radius: var(--border-radius);
+    border-color: var(--primary-tint-color);
+    border-width: var(--border-width); */
+
+  padding: var(--padding-small);
+  padding-left: var(--padding-medium);
+  padding-right: var(--padding-medium);
+
+  margin-right: var(--navbar-margins);
+
+  font-family: "Fascinate", cursive;
+  font-size: medium;
+
+  cursor: pointer;
+
+  transition: all 150ms;
+}
+
+.button:hover {
+  transform: scale(1.025, 1.025);
+  background-color: var(--tint-p-color);
+  color: var(--font-tint-color);
+}
+
+@media only screen and (max-width: 400px)
+{
+  .button {
+    display: none;
+  }
+}
+
+.icon {
+  display: none;
+}
+
+@media only screen and (max-width: 400px)
+{
+  .icon {
+    display: flex;
+  }
+}
+

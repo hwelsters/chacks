@@ -1,0 +1,36 @@
+/* BUTTON */
+.root {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  filter: brightness(0.9);
+
+  /* border-style: solid;
+      border-radius: var(--border-radius);
+      border-color: var(--primary-tint-color);
+      border-width: var(--border-width); */
+
+  margin-top: var(--padding-medium);
+  padding: var(--padding-small);
+  padding-left: var(--padding-large);
+  padding-right: var(--padding-large);
+
+  margin-right: var(--navbar-margins);
+
+  font-family: "Fascinate", cursive;
+  font-size: medium;
+
+  cursor: pointer;
+
+  transition: all 150ms;
+}
+
+.root:hover {
+  transform: scale(1.025, 1.025);
+  background-color: var(--tint-p-color);
+  color: var(--font-tint-color);
+}

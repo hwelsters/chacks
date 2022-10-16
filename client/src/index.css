@@ -1,0 +1,33 @@
+body {
+  --bg-color: #0e1013;
+  --font-color: #ffffff;
+  --tint-p-color: #eca642;
+  --tint-s-color: #77bd6c;
+  --tint-t-color: #d34740;
+
+  --navbar-height: 4rem;
+  
+  --padding-small: 0.75rem;
+  --padding-medium: 1.25rem;
+  --padding-large: 3rem;
+  --border-width: 0.05rem;
+  --border-radius: 0.5rem;
+
+  --input-height: 1rem;
+
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  margin: 0;
+
+
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+*{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}

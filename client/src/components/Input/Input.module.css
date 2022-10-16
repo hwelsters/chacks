@@ -1,0 +1,31 @@
+.root {
+    display: flex;
+
+    width: 50%;
+
+    flex-direction: column;
+    align-items: center;
+
+    font-size: medium;
+}
+
+.input {
+    width: 100%;
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--font-color);
+    background-color: transparent;
+    padding: var(--padding-small);
+
+    margin-top: var(--padding-small);
+    margin-bottom: var(--padding-small);
+
+    outline: none;
+
+    color: var(--font-color);
+    font-size: medium;
+}
+
+.input:hover {
+    border-color: var(--tint-p-color);
+}

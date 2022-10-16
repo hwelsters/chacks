@@ -1,0 +1,39 @@
+.register_block {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: clamp(1rem, 100%, 35rem);
+    border-style: solid;
+    border-width: var(--border-width);
+    padding-top: var(--padding-large);
+    padding-bottom: var(--padding-large);
+
+    margin-top: var(--padding-large);
+}
+
+@media only screen and (max-width: 800px)
+{
+    .register_block {
+        border-color: transparent;
+    }
+}
+
+.logo {
+    margin-bottom: var(--padding-medium);
+}
+
+
+.bottom {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    font-size: small;
+    align-items: center;
+}
+
+.link {
+    color: var(--tint-p-color);
+}

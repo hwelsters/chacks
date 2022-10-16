@@ -1,0 +1,2 @@
+docker build -t client_c .
+docker run -p 3000:3000 client_c

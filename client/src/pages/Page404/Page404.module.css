@@ -1,0 +1,14 @@
+.img {
+    width: 25rem;
+    margin-bottom: var(--padding-medium);
+}
+
+.yarn {
+    font-size: xx-large;
+    transform: scale(2);
+    transition: all 100ms;
+}
+
+.yarn:hover {
+    transform: scale(1.9);
+}
