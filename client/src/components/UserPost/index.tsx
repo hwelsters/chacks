@@ -2,7 +2,8 @@ import { paths, testUrls } from "../../data/paths";
 import styles from "./UserPost.module.css";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import { Link } from "react-router-dom";
-
+import { faker } from "@faker-js/faker";
+import { useEffect, useState } from "react";
 type UserPostParams = {
   sender: boolean;
   children?: React.ReactNode;
@@ -16,10 +17,16 @@ export default function UserPost({
   text,
   username,
 }: UserPostParams) {
+  const [image, setImage] = useState<string>("");
+
+  useEffect(()=> {
+    setImage(`${faker.image.nature()}?random=${Math.round(Math.random() * 1000)}`);
+  }, [])
+
   return (
     <div className={styles.big_root}>
       <div className={styles.root}>
-        <img className={styles.img} src={testUrls.awkwardCat} />
+        <img className={styles.img} src={image} />
         <div className={styles.text}>
           <Link to={paths.profile}>
             <h4 className={styles.click}>{username}</h4>
