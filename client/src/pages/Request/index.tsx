@@ -10,7 +10,7 @@ export default function Request() {
     <div>
       <Navbar />
       <PageContainer>
-        <UserPost sender={false} />
+        <UserPost sender={false} username="pickuper" text="Pickup: AAA Dropoff: AAA"/>
         <h3>Make a request</h3>
         <TextArea />
       </PageContainer>

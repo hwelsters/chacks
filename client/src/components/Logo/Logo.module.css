@@ -1,12 +1,12 @@
 .root {
-    display: flex;
-    color: var(--font-color);
-    font-family: "Fascinate", cursive;
-    font-weight: bolder;
-    font-size: xx-large;
+  display: flex;
+  color: var(--font-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: xx-large;
 
-    text-decoration: none;
-    justify-content: center;
+  text-decoration: none;
+  justify-content: center;
 
-    cursor: pointer;
+  cursor: pointer;
 }

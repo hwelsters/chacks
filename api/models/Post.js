@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 
 const PostSchema = mongoose.Schema(
   {
-    userId: { type: String, required: true },
-    username: { type: String, required: true },
-    img: { type: String },
-    text: { type: String, required: true },
-    likes: { type: Number, required: true },
-    emotion: { type: Number, required: true },
+    userId: { type: String },
+    username: { type: String },
+    pickup: { type: String },
+    dropoff: { type: String },
+    text: { type: String },
+    accepted: { type: Boolean },
   },
   { timestamps: true }
 );

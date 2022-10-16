@@ -7,7 +7,7 @@ import { paths } from "../../data/paths";
 export default function Logo() {
   return (
     <Link className={styles.root} to={paths.home}>
-      hitchhike
+      hitch_hike
     </Link>
   );
 }

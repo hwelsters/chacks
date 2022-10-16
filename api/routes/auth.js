@@ -16,7 +16,7 @@ const passwordIsStrong = (password) => {
 // REGISTER
 router.post("/register", async (req, res) => {
   console.log("REGISTER");
-
+  console.log(req);
   if (!passwordIsStrong(req.body.password)) {
     res
       .status(406)

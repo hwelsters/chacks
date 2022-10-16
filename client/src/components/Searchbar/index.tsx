@@ -4,10 +4,11 @@ import { Select } from "@mantine/core";
 
 import { airportCodes } from "../../data/airports";
 
-export default function Searchbar() {
+export default function Searchbar({ text, onSubmit }: any) {
   const [from, setFrom] = useState<null | string>("");
   const [to, setTo] = useState<null | string>("");
 
+  console.log(onSubmit);
   return (
     <div className={styles.root}>
       From
@@ -17,7 +18,7 @@ export default function Searchbar() {
         className={styles.input}
         searchable
         maxDropdownHeight={280}
-        onChange={(e)=>setFrom(e)}
+        onChange={(e) => setFrom(e)}
       />
       To
       <Select
@@ -26,9 +27,11 @@ export default function Searchbar() {
         className={styles.input}
         searchable
         maxDropdownHeight={280}
-        onChange={(e)=>setFrom(e)}
+        onChange={(e) => setTo(e)}
       />
-      <div className={styles.button}>SEARCH</div>
+      <div className={styles.button} onClick={() => onSubmit(from, to)}>
+        {text}
+      </div>
     </div>
   );
 }

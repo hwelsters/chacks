@@ -7,6 +7,7 @@ export const paths = {
   profile: "/profile",
   request: "/request",
   dashboard: "/dashboard",
+  stripe: "https://buy.stripe.com/test_cN2cPc34B5XC0GQ000",
 };
 
 export const testUrls = {

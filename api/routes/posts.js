@@ -16,30 +16,23 @@ const analyzeSentiment = (text) => {
 };
 
 // CREATE POST
-router.post("/create", verify, async (req, res) => {
-  if (req.text === "") {
-    res.status.apply(400).json("Empty text");
-    return;
-  }
-
+router.post("/create", async (req, res) => {
+  console.log(req);
   console.log("CREATE POST");
-  const sentiment = analyzeSentiment(req.body.text);
-  if (req.user && req.user.id === req.body.id) {
-    const newPost = new Post({
-      userId: req.body.id,
-      username: req.body.username,
-      img: req.body.img,
-      text: req.body.text,
-      likes: 0,
-      emotion: sentiment,
-    });
-    try {
-      const post = await newPost.save();
-      console.log(post);
-      res.status(200).json("Post created");
-    } catch (err) {
-      res.status(500).json("Failed to create post");
-    }
+  const newPost = new Post({
+    userId: req.body.userId,
+    username: req.body.username,
+    pickup: req.body.pickup,
+    dropoff: req.body.dropoff,
+    text: req.body.text,
+  });
+  try {
+    const post = await newPost.save();
+    console.log(post);
+    res.status(200).json("Post created");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json("Failed to create post");
   }
 });
 
@@ -55,10 +48,14 @@ router.get("/recent", async (req, res) => {
 });
 
 // GET USER POSTS
-router.get("/userPosts/:username", async (req, res) => {
-  console.log("GET USER");
+router.post("/getus", async (req, res) => {
+  console.log("GET POSTS");
+  console.log(req.body);
   try {
-    const posts = await Post.find({ username: req.params.username })
+    const posts = await Post.find({
+      pickup: req.body.pickup,
+      dropoff: req.body.dropoff,
+    })
       .sort({
         createdAt: -1,
       })
@@ -69,11 +66,10 @@ router.get("/userPosts/:username", async (req, res) => {
   }
 });
 
-router.get("/emotions/:id", async (req, res) => {
-  console.log("GET EMOTIONS");
+router.get("/requests", async (req, res) => {
   console.log(req.params.id);
   try {
-    const posts = await await Post.find({ emotion: req.params.id })
+    const posts = await await Post.find({ pickup: null, dropoff: null })
       .limit(10)
       .sort({ createdAt: -1 });
     res.status(200).json(posts);
