@@ -8,14 +8,18 @@
   margin-right: var(--padding-large);
 }
 
+.inputDiv {
+  display: flex;
+  align-items: center;
+}
+
 .input {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-width: var(--border-width);
-  border-style: solid;
   height: calc(var(--navbar-height) / 1.75);
-  width: clamp(1rem, 50%, 35rem);
+  width: clamp(1rem, 50%, 25rem);
   margin-left: var(--padding-large);
   margin-right: var(--padding-large);
   background-color: transparent;
@@ -50,7 +54,8 @@
 
   margin-right: var(--navbar-margins);
 
-  font-family: "Fascinate", cursive;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
   font-size: medium;
 
   cursor: pointer;

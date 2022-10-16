@@ -12,7 +12,6 @@ export default function Navbar() {
   return (
     <div className={styles.root}>
       <Logo />
-      <Searchbar/>
       <Link to={paths.login}>
         <div className={styles.button}>SIGN IN</div>
         <div className={styles.icon}>

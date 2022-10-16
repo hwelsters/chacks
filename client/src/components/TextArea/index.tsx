@@ -1,10 +1,9 @@
-import InputButton from "../../../../components/InputButton";
+import InputButton from "../InputButton";
 import styles from "./RequestInput.module.css";
 
-export default function RequestInput() {
+export default function TextArea() {
   return (
     <div className={styles.root}>
-      <h3>Make a request</h3>
       <div className={styles.input}>
         <textarea className={styles.textarea}/>
         <InputButton text="SUBMIT"/>

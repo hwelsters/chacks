@@ -22,8 +22,8 @@
   padding-right: var(--padding-large);
 
   margin-right: var(--navbar-margins);
-
-  font-family: "Fascinate", cursive;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
   font-size: medium;
 
   cursor: pointer;

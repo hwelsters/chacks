@@ -1,4 +1,5 @@
 import React from 'react'
+import TextArea from '../../components/TextArea';
 import UserPost from '../../components/UserPost';
 import Footer from '../../layouts/Footer'
 import Navbar from '../../layouts/Navbar'
@@ -17,6 +18,7 @@ export default function Profile() {
             <h3>✨ 5/5 stars ✨</h3>
             <div className={styles.posts}>
                 <h3>Feed</h3>
+                <TextArea/>
                 <UserPost sender/>
             </div>
             <div className={styles.posts}>

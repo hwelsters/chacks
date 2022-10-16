@@ -8,12 +8,10 @@ import Page404 from "./pages/Page404";
 
 import { paths } from "./data/paths";
 import Profile from "./pages/Profile";
-import { get } from "./services/apiCalls";
 import Request from "./pages/Request";
 import Dashboard from "./pages/Dashboard";
 
 function App() {
-  get();
   return (
     <AuthContextProvider>
       <BrowserRouter>

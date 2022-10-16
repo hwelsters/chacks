@@ -1,19 +1,24 @@
 .root {
   display: flex;
   position: sticky;
+
   top: 0;
   left: 0;
 
   z-index: 10;
   background-color: var(--bg-color);
+  height: var(--navbar-height);
 
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  height: var(--navbar-height);
   padding-left: var(--padding-large);
   padding-right: var(--padding-large);
+  padding-top: var(--padding-small);
+}
+
+.horizontal {
+  display: flex;
 }
 
 /* BUTTON */
@@ -38,7 +43,8 @@
 
   margin-right: var(--navbar-margins);
 
-  font-family: "Fascinate", cursive;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
   font-size: medium;
 
   cursor: pointer;
@@ -52,8 +58,7 @@
   color: var(--font-tint-color);
 }
 
-@media only screen and (max-width: 400px)
-{
+@media only screen and (max-width: 400px) {
   .button {
     display: none;
   }
@@ -63,10 +68,8 @@
   display: none;
 }
 
-@media only screen and (max-width: 400px)
-{
+@media only screen and (max-width: 400px) {
   .icon {
     display: flex;
   }
 }
-
