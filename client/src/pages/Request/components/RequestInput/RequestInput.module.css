@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  width: clamp(1rem, 90%, 30rem);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+  width: 100%;
+  height: 10rem;
+  padding: var(--padding-small);
+  border-style: solid;
+  border-width: var(--border-width);
+  color: var(--font-color);
+}
+
+.textarea {
+  width: 99%;
+  height: 99%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--font-color);
+  font-size: medium;
+  resize: none;
+}

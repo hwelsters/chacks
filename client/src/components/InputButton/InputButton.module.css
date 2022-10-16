@@ -9,6 +9,8 @@
   color: var(--bg-color);
   filter: brightness(0.9);
 
+  border-radius: var(--border-radius);
+
   /* border-style: solid;
       border-radius: var(--border-radius);
       border-color: var(--primary-tint-color);

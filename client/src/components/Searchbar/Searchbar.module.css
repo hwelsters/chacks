@@ -1,34 +1,65 @@
 .root {
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    border-width: var(--border-width);
-    border-radius: var(--border-radius);
-    border-style: solid;
-    height: calc(var(--navbar-height) / 1.75);
-    width: clamp(1rem, 50%, 35rem);
-    margin-left: var(--padding-large);
-    margin-right: var(--padding-large);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(var(--navbar-height) / 1.75);
+  width: clamp(1rem, 50%, 35rem);
+  margin-left: var(--padding-large);
+  margin-right: var(--padding-large);
 }
 
 .input {
-    flex: 1;
-    background-color: transparent;
-    color: var(--font-color);
-    outline: none;
-    border: none;   
-    font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: var(--border-width);
+  border-style: solid;
+  height: calc(var(--navbar-height) / 1.75);
+  width: clamp(1rem, 50%, 35rem);
+  margin-left: var(--padding-large);
+  margin-right: var(--padding-large);
+  background-color: transparent;
+  color: var(--font-color);
+  font-size: medium;
 }
 
-.button {
-    width: 2rem;
-    aspect-ratio: 1/1;
-    border-width: var(--border-width);
-    border-radius: var(--border-radius);
-    border-style: solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.input:hover {
+  border-color: var(--tint-p-color);
+}
 
-    cursor: pointer;
+/* BUTTON */
+.button {
+  display: flex;
+
+  height: 50%;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  filter: brightness(0.9);
+
+  /* border-style: solid;
+      border-radius: var(--border-radius);
+      border-color: var(--primary-tint-color);
+      border-width: var(--border-width); */
+
+  padding: var(--padding-small);
+  padding-left: var(--padding-medium);
+  padding-right: var(--padding-medium);
+
+  margin-right: var(--navbar-margins);
+
+  font-family: "Fascinate", cursive;
+  font-size: medium;
+
+  cursor: pointer;
+
+  transition: all 150ms;
+}
+
+.button:hover {
+  transform: scale(1.025, 1.025);
+  background-color: var(--tint-p-color);
+  color: var(--font-tint-color);
 }

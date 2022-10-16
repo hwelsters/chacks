@@ -1,53 +1,65 @@
+.big_root {
+  width: 100%;
+  border-style: solid;
+  border-width: var(--border-width);
+
+  width: clamp(1rem, 90%, 30rem);
+  aspect-ratio: 5/1;
+  padding: var(--padding-small);
+  margin-top: var(--padding-medium);
+  margin-bottom: var(--padding-medium);
+  border-radius: var(--border-radius);
+}
+
 .root {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 
-    flex-direction: row;
-    padding: var(--padding-small);
+  flex-direction: row;
 
-    border-style: solid;
-    border-width: var(--border-width);
+  width: 100%;
+  
 
-    width: clamp(1rem, 90%, 30rem);
-    aspect-ratio: 5/1;
-    margin-top: var(--padding-medium);
-    margin-bottom: var(--padding-medium);
-    border-radius: var(--border-radius);
+  cursor: pointer;
+}
 
+.innerBlock {
+  width: 100%;
+  flex-direction: column;
 }
 
 .date {
-    margin-top: -1rem;
-    font-size: x-small;
+  margin-top: -1rem;
+  font-size: x-small;
 }
 
 .img {
-    height: 10rem;
-    aspect-ratio: 1/1;
-    border-radius: var(--border-radius);
-    object-fit: cover;
-    cursor: pointer;
+  height: 10rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .text {
-    margin-left: var(--padding-medium);
-    display: flex;
-    flex-direction: column;
+  margin-left: var(--padding-medium);
+  display: flex;
+  flex-direction: column;
 }
 
 .click {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .info {
-    font-size: medium;
-    margin-top: -0.25rem;
+  font-size: medium;
+  margin-top: -0.25rem;
 }
 
 .footer {
-    display: flex;
-    margin-top: var(--padding-small);
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  margin-top: var(--padding-small);
+  align-items: center;
+  justify-content: space-between;
 }

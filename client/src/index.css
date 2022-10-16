@@ -31,3 +31,28 @@ a {
   text-decoration: none;
   color: var(--font-color);
 }
+
+
+/* Customized scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--font-color);
+  border-radius: 1rem;
+  width: 0.01rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(0.95);
+}

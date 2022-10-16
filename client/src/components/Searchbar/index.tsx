@@ -4,11 +4,11 @@ import SearchIcon from "@mui/icons-material/Search";
 export default function Searchbar() {
   return (
     <div className={styles.root}>
-      <SearchIcon />
+      From
       <input className={styles.input} type="text" />
-      <div className={styles.button}>
-        <SearchIcon />
-      </div>
+      To
+      <input className={styles.input} type="text" />
+      <div className={styles.button}>SEARCH</div>
     </div>
   );
 }
